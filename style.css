@@ -1,0 +1,213 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+
+  body {
+      font-family: "Outfit", cursive;
+      background-color: #050037;
+      color: #FFBB00;
+      font-size: max(17px, 3.5vmin);
+      width: 95%;
+      max-width: 1080px;
+      margin: auto;
+  }
+  
+  
+  h1 {
+    display: block;
+    font-family: "Freckle Face", cursive;
+    font-size: 30vmin;
+    font-weight: bold;
+    color: #E21037;
+    width: 100%;
+    margin: 10vh auto 7vh auto;
+    line-height: 0.75;
+    text-align: center;
+  }
+  
+  h2, callout{
+      font-family: "Freckle Face", cursive;
+      font-size: 3em;
+      color: white;
+      margin: 0;
+  }
+  
+  h3 {
+      font-family: "Freckle Face", cursive;
+      font-size: 2em;
+      color: white;
+      text-align: center;
+  }
+  
+  p {
+    margin: 0 0.5%;
+  }
+  
+  callout {
+      display: inline;
+      vertical-align: base;
+      line-height: 1em;
+  }
+  
+  blockquote {
+    display: block;
+    padding: 50px;
+    font-family: "Freckle Face", cursive;
+    margin: auto;
+    max-width: 600px;
+    font-size: 2em;
+    color: #E21037;
+    line-height: 1em;
+  }
+  
+  hr {
+      color: #E21037;
+      background-color: #E21037;
+      border-color: transparent;
+  }
+  
+  footer {
+    display: block;
+    text-align: center;
+  }
+  
+  
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  margin: 5vh auto;
+  /*outline: 2px dashed blue;*/
+}
+  
+.contacts a {
+  color: white;
+  font-weight: normal;
+  text-decoration: underline 0.075ex;
+  text-align: center;
+}
+
+.contacts a:hover {
+  background-color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.contacts a:before {
+  display:block;
+  content: attr(data-text) / "";
+  height: 0px;
+  visibility: hidden;
+  overflow: hidden;
+  user-select: none;
+  pointer-events: none;
+  font-weight: bold;
+}
+  
+  
+  
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+  vertical-align: text-bottom;
+}
+
+.contacts a:hover .material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 700,
+  'GRAD' 0,
+  'opsz' 24;
+}
+  
+  
+.scroll-carousel {
+  display: flex;
+  height: 7lh;
+  column-gap: 0.2em;
+  margin: 0;
+  background-color: transparent;
+  flex-shrink: 0;
+  align-items: stretch;
+  overflow-x: auto;
+  overflow-y: visible;
+  scrollbar-color: #E21037 transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  mask: linear-gradient(to right, black, black, black, transparent);
+}
+
+.left {
+  flex-direction: row-reverse;
+  mask: linear-gradient(to left, black, black, black, transparent);
+}
+
+.card {
+  display: block;
+  position: relative;
+  flex-shrink: 0;
+  height: 90%;
+  border-radius: 0.5em;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  /*background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.1));*/
+}
+
+.card a {
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%; width: 100%;
+}
+
+.card img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.card capt {
+  display: block;
+  position: absolute;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: capitalize;
+  width: 100%;
+  bottom: 0;
+  text-align: left;
+  color: transparent;
+  overflow: hidden;
+}
+
+.card:hover capt {
+  color: white;
+  background: black;
+}
+
+@media (any-hover: none) {
+  .card capt {
+    color: white;
+    background: black;
+  }
+}
+
+.card:active capt {
+  color: black;
+  background: white;
+}
+
+.card:active {
+  outline: solid 0.3em white;
+  outline-offset: -0.3em;
+}
+
+.scroll-carousel end-buffer {
+  flex-shrink: 0;
+  margin: 0;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 0.5em;
+}
