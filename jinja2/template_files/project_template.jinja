@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&ampdisplay=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&ampdisplay=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@900&ampdisplay=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/project-style.css">
+
+<title>{{title}}</title>
+<link rel="icon" href="/favicon.svg">
+{{headerCode}}
+
+</head>
+<body>
+  <div class= "split-title">
+    <div class="h1"><a href="https://nedinyourhead.neocities.org">&lt;</a> {{title}}</div>
+    <div class="role">{{role}}</div>
+  </div>
+  
+  <div class="split-body">
+    
+    <div class="gallery">
+      <img id="full-image" src="thumbnail.{{thumbType}}">
+      
+      <div class="previews">
+        <img id="thumb" src="thumbnail.{{thumbType}}" onclick="galleryFunction(this)">
+		{% for item in galleryImages %}
+        <img id="thumb" src="{{item}}" onclick="galleryFunction(this)">
+		{% endfor %}
+	  </div>
+		
+      <div class="links">
+		{% for item in links %}
+        <a class="link" href="{{item.address}}">{{item.name}} &gt;&gt;<br></a>
+		{% endfor %}
+        <a class="link" href="/">&lt;&lt; Back</a>
+      </div>
+    </div>
+    
+   <p>
+    <b>{{introParagraph}}</b>
+    <br><br>
+    {{bodyContent}}
+   </p>
+  
+  </div>
+
+<script src="/gallery.js"></script>
+</body>
+</html>
+
+
+
