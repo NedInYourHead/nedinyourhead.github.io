@@ -1,0 +1,137 @@
+
+  body {
+    font-family: "Outfit";
+    background-color: #050037;
+    margin: 1lh 1.2em;
+    font-size: max(17px, 3.5vmin);
+  }
+  
+  .split-title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: baseline;
+    column-gap: 0.25em;
+    margin: 0;
+    font-size: 2.5em;
+    /*background: purple;*/
+  }
+  
+  .split-title .h1 {
+    font-family: "Freckle Face";
+    font-weight: bold;
+    color: white;
+    font-size: 1em;
+  }
+  
+  .split-title .role {
+    font-family: "Outfit";
+    color: #E21037;
+    font-weight: normal;
+    font-size: 0.6em;
+  }
+  
+  a {
+    font-family: "Outfit";
+    color: #FFBB00;
+    font-weight: normal;
+    text-decoration: underline 0.075ex;
+    text-transform: uppercase;
+  }
+  
+  a:hover {
+    font-weight: bold;
+  }
+  
+  div.links {
+    margin: 0 0;
+    font-size: 1.2em;
+  }
+  
+  a.link {
+    display: inline;
+  }
+  
+  .split-body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.5lh 0.6em;
+    margin: 0.5lh 0.6em;
+  }
+  
+  .gallery {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: min(95vh, 100%);
+    object-fit: cover;
+    gap: 0.5lh;
+  }
+  
+  #full-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    border-radius: 0.5em;
+    image-rendering: pixelated;
+  }
+  
+  .previews {
+    display: flex;
+    height: 18vmin;
+    min-height: 2lh;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    column-gap: 0.4em;
+    margin: 0;
+    background-color: transparent;
+    align-items: stretch;
+    overflow-x: auto;
+    overflow-y: visible;
+    scrollbar-color: #E21037 transparent;
+  }
+  
+  #thumb {
+    flex-shrink: 0;
+    object-fit: cover;
+    height: 90%;
+    border-radius: 0.5em;
+    overflow: hidden;
+  }
+  
+  #thumb:hover {
+    outline: solid 0.3em #E21037;
+    outline-offset: -0.3em;
+  }
+  
+  #thumb:active {
+    outline-color: white;
+  }
+  
+  p {
+    color: white;
+    overflow: visible;
+    flex: 1;
+    background: transparent;
+    margin-block: 0; 
+  }
+  
+  @media (max-aspect-ratio: 8 / 5) {
+    .gallery {
+      width: 100%; 
+    }
+    #full-image {
+      height: 54vmin;
+    }
+    
+    p {
+      max-height: none;
+      max-width: none;
+      min-width: 100%;
+    }
+  }
+  
+  
+  
