@@ -13,13 +13,13 @@ PROJECT_TEMPLATE_FILE = "project_template.jinja"
 
 
 #Format directories as readable paths
-uri_template_directory = TEMPLATE_DIRECTORY.replace("\\", r"/")
+python_template_directory = TEMPLATE_DIRECTORY.replace("\\", r"/")
 uri_input_directory = 'file:' + INPUT_DIRECTORY.replace("\\", r"/")
 uri_output_directory = 'file:' + OUTPUT_DIRECTORY.replace("\\", r"/")
 
 
 #Use Jinja's built-in template loading system to load the template
-templateLoader = jinja2.FileSystemLoader(searchpath=uri_template_directory)
+templateLoader = jinja2.FileSystemLoader(searchpath=python_template_directory)
 templateEnv = jinja2.Environment(loader=templateLoader, autoescape = False)
 template = templateEnv.get_template(PROJECT_TEMPLATE_FILE)
 
