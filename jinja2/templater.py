@@ -1,12 +1,15 @@
 import jinja2
 import importlib.util
 import pathlib
+from pyshortcuts import make_shortcut
+
 
 
 #KEEP THE STRINGS RAW (sushi grade, if you'd prefer) Just paste your desired path straight from the file manager below vv
-TEMPLATE_DIRECTORY = r"C:\Users\theno\Documents\Uni Work\GitHub\nedinyourhead.github.io\jinja2\template_files"
-INPUT_DIRECTORY = r"C:\Users\theno\Documents\Uni Work\GitHub\nedinyourhead.github.io\jinja2\input_files"
-OUTPUT_DIRECTORY = r"C:\Users\theno\Documents\Uni Work\GitHub\nedinyourhead.github.io"
+PYTHONW_DIRECTORY = r"C:\Users\theno\AppData\Local\Python\pythoncore-3.14-64\pythonw.exe"
+TEMPLATE_DIRECTORY = r"C:\Users\theno\Documents\GitHub\nedinyourhead.github.io\jinja2\template_files"
+INPUT_DIRECTORY = r"C:\Users\theno\Documents\GitHub\nedinyourhead.github.io\jinja2\input_files"
+OUTPUT_DIRECTORY = r"C:\Users\theno\Documents\GitHub\nedinyourhead.github.io"
 
 #Template file names
 PROJECT_TEMPLATE_FILE = "project_template.jinja"
@@ -34,8 +37,15 @@ for source_file in pathlib.Path.from_uri(uri_input_directory).glob('*.py'):
     
 
     print("Generated", mod.project_data)
-
+    
     p = pathlib.Path.from_uri(uri_output_directory)
     folder = p / source_file.stem.replace("_", "-") / "index.html"
     with folder.open("w") as f:
         f.write(output_text)
+
+    make_shortcut(PYTHONW_DIRECTORY + " -m idlelib.idle " + '"' + INPUT_DIRECTORY + "\\" + source_file.name + '"',
+                  name = 'input file',
+                  folder = OUTPUT_DIRECTORY + "\\" + source_file.stem.replace("_", "-"),
+                  startmenu = False,
+                  noexe = False
+                  )

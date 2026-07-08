@@ -16,7 +16,7 @@ project_data = ProjectSiteData(
     "png",
 
     #Other Gallery Images
-    ["screenshot2.png", "screenshot1.png", "OGscreenshot1.png"],
+    ["screenshot2.jpeg", "screenshot1.jpeg", "OGscreenshot1.png"],
 
     #Links
     [
