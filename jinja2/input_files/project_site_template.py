@@ -6,12 +6,12 @@ project_data = ProjectSiteData(
     #Title
     "Project Template",
 
-    
-    #Header Code
-    r"",
-
     #Role
     "Role On The Project",
+
+    #Header Code
+    r"",
+    
 
     #Thumbnail File Type
     "png",
