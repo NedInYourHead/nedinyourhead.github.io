@@ -11,24 +11,24 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: baseline;
-    column-gap: 0.25em;
+    column-gap: 0.5em;
     margin: 0;
-    font-size: 2.5em;
     /*background: purple;*/
   }
   
   .split-title .h1 {
     font-family: "Freckle Face";
     font-weight: bold;
-    color: white;
-    font-size: 1em;
+    color: #E21037;
+    font-size: 2.25em;
   }
   
   .split-title .role {
     font-family: "Outfit";
-    color: #E21037;
+    color: white;
     font-weight: normal;
-    font-size: 0.6em;
+    font-size: 1.5em;
+    background-color: black;
   }
   
   a {
@@ -44,7 +44,7 @@
   }
   
   div.links {
-    margin: 0 0;
+    margin: 0 0.6em;
     font-size: 1.2em;
   }
   
@@ -57,7 +57,7 @@
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 0.5lh 0.6em;
+    gap: 0.5lh 1.2em;
     margin: 0.5lh 0.6em;
   }
   
@@ -68,14 +68,34 @@
     width: min(95vh, 100%);
     object-fit: cover;
     gap: 0.5lh;
+    align-self: center;
+  }
+  
+  .full-image-container {
+    display: block;
+    position: relative;
+    border-radius: 0.5em;
+    overflow: hidden;
+    /*outline: solid 0.3em black;
+    outline-offset: -0.3em;*/
   }
   
   #full-image {
+    border-radius: 0.5em;
     width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: contain;
-    border-radius: 0.5em;
     image-rendering: pixelated;
+  }
+  
+  .full-image-container #full-image-caption {
+    display: block;
+    position: absolute;
+    font-weight: bold;
+    /*width: 100%;*/
+    bottom: 0;
+    color: white;
+    background: black;
   }
   
   .previews {
@@ -93,7 +113,7 @@
     scrollbar-color: #E21037 transparent;
   }
   
-  #thumb {
+  .thumb {
     flex-shrink: 0;
     object-fit: cover;
     height: 90%;
@@ -101,13 +121,76 @@
     overflow: hidden;
   }
   
-  #thumb:hover {
+  .thumb:hover {
     outline: solid 0.3em #E21037;
     outline-offset: -0.3em;
   }
   
-  #thumb:active {
+  .thumb:active {
     outline-color: white;
+  }
+  
+  .desc-div {
+    flex: 1;
+    align-self: stretch;
+    background-color: #00000040;
+    padding: 0 1em 0.7lh 1em;
+    border-radius: 0.5em;
+  }
+  
+  .desc-navigationbar {
+    display: flex;
+    direction: right;
+    width: 100%;
+    margin: 0 0 0.25lh 0;
+  }
+  
+  .desc-info-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: baseline;
+    align-self: center;
+    gap: 0.25lh 0.6em;
+  }
+  
+  .desc-title {
+    display: inline-block;
+    font-family: "Outfit";
+    color: #E21037;
+    font-weight: normal;
+    font-size: 2em;
+    text-align: left;
+    flex-grow: 0;
+  }
+  
+  .desc-date {
+    display: inline-block;
+    font-family: "Outfit";
+    color: black;
+    font-weight: normal;
+    font-size: 0.8em;
+    text-align: left;
+    flex-grow: 0;
+    background: white;
+  }
+  
+  
+  div.desc-controls {
+    flex-shrink: 0;
+    flex-grow: 1;
+    text-align: right;
+    align-self: center;
+    min-width: 2em;
+  }
+  
+  
+  
+  a.desc-gallery-button {
+    font-size: 3em;
+    display: inline-block;
+    text-decoration: none;
+    margin-left: 0.15em;
   }
   
   p {
@@ -118,9 +201,10 @@
     margin-block: 0; 
   }
   
-  @media (max-aspect-ratio: 8 / 5) {
+  @media (max-aspect-ratio: 9 / 5) {
     .gallery {
-      width: 100%; 
+      width: 100%;
+      align-self: auto;
     }
     #full-image {
       height: 54vmin;

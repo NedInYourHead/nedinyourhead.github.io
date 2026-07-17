@@ -1,5 +1,10 @@
+const fullImg = document.getElementById('full-image');
+const caption = document.getElementById('full-image-caption');
+
+galleryFunction(document.getElementById('thumbnail'));
+
 function galleryFunction(thumb) {
-    let fullImg = document.getElementById('full-image');
     fullImg.src = thumb.src;
+    caption.innerHTML = thumb.title;
     thumb.active;
 }
