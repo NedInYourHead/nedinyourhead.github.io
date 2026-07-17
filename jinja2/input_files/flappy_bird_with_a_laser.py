@@ -30,7 +30,7 @@ project_data = ProjectSiteData(
 
     bodyContent = [
         
-        BodyContent("Mobile Port", r"July 08, 2026",
+        BodyContent("Mobile Port", "July 08, 2026",
 
             r"""
             <b>Flappy bird with a twist! Use a second button to zap enemies out of the air, while avoiding the robo-pipes coming your way.</b>
@@ -44,7 +44,7 @@ project_data = ProjectSiteData(
             """
         ),
 
-        BodyContent("Original Web Version", r"November 14, 2023",
+        BodyContent("Original Web Version", "November 14, 2023",
 
             r"""
             <b>Flappy bird with a twist! Use a second button to zap enemies out of the air, while avoiding the robo-pipes coming your way.</b>

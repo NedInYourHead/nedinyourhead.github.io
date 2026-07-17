@@ -43,7 +43,6 @@ for source_file in pathlib.Path.from_uri(uri_input_directory).glob('*.py'):
     folder = p / source_file.stem.replace("_", "-")
     file = folder / "index.html"
 
-    print(output_text)
 
 
     #write to output file if possible
