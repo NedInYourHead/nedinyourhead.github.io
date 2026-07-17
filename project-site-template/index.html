@@ -7,56 +7,71 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&ampdisplay=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@900&ampdisplay=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="/project-style.css">
+	<link rel="stylesheet" href="/project-style.css">
 
-<title>Project Template</title>
-<link rel="icon" href="/favicon.svg">
-
+	<title></title>
+	<link rel="icon" href="/favicon.png">
+	
 
 </head>
 <body>
   <div class= "split-title">
-    <div class="h1"><a href="/">&lt;</a> Project Template</div>
-    <div class="role">Role On The Project</div>
+    <div class="h1"><a href="/">&lt;</a> </div>
+    <div class="role"></div>
   </div>
   
   <div class="split-body">
     
     <div class="gallery">
-      <img id="full-image" src="thumbnail.png">
+      <div class="full-image-container">
+        <img id="full-image" src="thumbnail.png" style="image-rendering: pixelated;">
+        <div id="full-image-caption"></div>
+      </div>
       
       <div class="previews">
-        <img id="thumb" src="thumbnail.png" onclick="galleryFunction(this)">
+        <img id="thumbnail" class="thumb" src="thumbnail.png" style="image-rendering: pixelated;" onclick="galleryFunction(this)">
 		
-        <img id="thumb" src="screenshot1.png" onclick="galleryFunction(this)">
-		
-        <img id="thumb" src="screenshot2.png" onclick="galleryFunction(this)">
-		
-	  </div>
-		
+      </div>
+      
       <div class="links">
-		
-        <a class="link" href="https://link1.com">Link1 &gt;&gt;<br></a>
-		
-        <a class="link" href="https://link2.com">Link2 &gt;&gt;<br></a>
 		
         <a class="link" href="/">&lt;&lt; Back</a>
       </div>
+      
     </div>
     
-   <p>
-    <b>Intro paragraph, summarise the project</b>
-    <br><br>
     
-    html-formatted description. Use
-    <br><br>
-    to separate paragraphs, and feel free to add code, links, or whatever you like.
-    
-   </p>
-  
+    <div class="desc-div">
+
+      <div class="desc-navigationbar">
+      
+        <div class="desc-info-container">
+          <div id="title-output" class="desc-title"></div>
+          <div id="date-output" class="desc-date"></div>
+        </div>
+        
+        <div id="desc-controls" class="desc-controls">
+          <a id="prevButton" class="desc-gallery-button" href="javascript: switchDescription(-1)">&lt;</a>
+          <a id="nextButton" class="desc-gallery-button" href="javascript: switchDescription(1)">&gt;</a>
+        </div>
+        
+      </div>
+      
+            
+      <p id="desc-output"></p>
+      
+      
+    </div>
+      
+      
   </div>
+    
+    <ol id="desc-list" style="display: none">
+	  
+    </ol>
 
 <script src="/gallery.js"></script>
+<script src="/desc-gallery.js"></script>
 </body>
 </html>
 

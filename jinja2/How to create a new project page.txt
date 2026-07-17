@@ -1,0 +1,7 @@
+1. Create a new input file by copying "project_site_template.py"
+
+2. rename "project_site_template.py" to your project name, and edit its values as desired
+
+2. Run templater.py to generate a new folder
+
+4. Add your images to the generated folder, under the names you just specified, as well as one "thumbnail.png".

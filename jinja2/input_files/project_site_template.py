@@ -1,37 +1,42 @@
-from project_site_data import Link, ProjectSiteData
+from project_site_data import ProjectSiteData, Link, GalleryImage, BodyContent
 
 
 project_data = ProjectSiteData(
-
-    #Title
-    "Project Template",
-
-    #Role
-    "Role On The Project",
-
-    #Header Code
-    r"",
     
+    title = "Project Title",
 
-    #Thumbnail File Type
-    "png",
 
-    #Other Gallery Images
-    ["screenshot1.png", "screenshot2.png"],
+    role = "Role On The Project",
 
-    #Links
-    [
+
+    headerCode = r"",
+
+
+    thumbType = "png",
+
+
+    galleryImages = [
+        GalleryImage("screenshot1.png", "First screenshot"),
+        GalleryImage("screenshot2.png", "Second screenshot")
+    ],
+
+
+    links = [
         Link("Link1", "https://link1.com"),
         Link("Link2", "https://link2.com")
     ],
 
-    #Intro Paragraph
-    "Intro paragraph, summarise the project",
 
-    #Description
-    r"""
-    html-formatted description. Use
-    <br><br>
-    to separate paragraphs, and feel free to add code, links, or whatever you like.
-    """
+    bodyContent = [
+        
+        BodyContent("Without embed:", r"Month DD, YYYY",
+
+            r"""
+            Before I got spotify, before I got an MP3 player, I used to go home on the bus after dark during the winter, and I always enjoyed watching the lights of the city out the window as it went by, humming this music in my head. 
+            <br><br>
+            So as soon as I could get my hands on an MP3 player, I immediately started loading songs onto it to capture that feeling, and these would be the tracks I'd listen to as I wandered London on my scooter during my teenage years. 8 years on from that and counting, I've kept adding to that playlist to this day.
+            """
+
+        )
+    ]
 )

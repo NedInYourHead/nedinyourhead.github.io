@@ -7,11 +7,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&ampdisplay=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@900&ampdisplay=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="/project-style.css">
+	<link rel="stylesheet" href="/project-style.css">
 
-<title>{{title}}</title>
-<link rel="icon" href="/favicon.svg">
-{{headerCode}}
+	<title>{{title}}</title>
+	<link rel="icon" href="/favicon.png">
+	{{headerCode}}
 
 </head>
 <body>
@@ -23,32 +23,64 @@
   <div class="split-body">
     
     <div class="gallery">
-      <img id="full-image" src="thumbnail.{{thumbType}}">
+      <div class="full-image-container">
+        <img id="full-image" src="thumbnail.png" style="image-rendering: pixelated;">
+        <div id="full-image-caption"></div>
+      </div>
       
       <div class="previews">
-        <img id="thumb" src="thumbnail.{{thumbType}}" onclick="galleryFunction(this)">
+        <img id="thumbnail" class="thumb" src="thumbnail.png" style="image-rendering: pixelated;" onclick="galleryFunction(this)">
 		{% for item in galleryImages %}
-        <img id="thumb" src="{{item}}" onclick="galleryFunction(this)">
+        <img id="thumb" src="{{item.filename}}" title="{{item.caption}}" onclick="galleryFunction(this)">
 		{% endfor %}
-	  </div>
-		
+      </div>
+      
       <div class="links">
 		{% for item in links %}
         <a class="link" href="{{item.address}}">{{item.name}} &gt;&gt;<br></a>
 		{% endfor %}
         <a class="link" href="/">&lt;&lt; Back</a>
       </div>
+      
     </div>
     
-   <p>
-    <b>{{introParagraph}}</b>
-    <br><br>
-    {{bodyContent}}
-   </p>
-  
+    
+    <div class="desc-div">
+
+      <div class="desc-navigationbar">
+      
+        <div class="desc-info-container">
+          <div id="title-output" class="desc-title"></div>
+          <div id="date-output" class="desc-date"></div>
+        </div>
+        
+        <div id="desc-controls" class="desc-controls">
+          <a id="prevButton" class="desc-gallery-button" href="javascript: switchDescription(-1)">&lt;</a>
+          <a id="nextButton" class="desc-gallery-button" href="javascript: switchDescription(1)">&gt;</a>
+        </div>
+        
+      </div>
+      
+            
+      <p id="desc-output"></p>
+      
+      
+    </div>
+      
+      
   </div>
+    
+    <ol id="desc-list" style="display: none">
+	  {% for item in bodyContent %}
+      <li data-title="{{item.title}}" data-date="item.date">
+        {{item.content}}
+      </li>
+	  
+	  {% endfor %}
+    </ol>
 
 <script src="/gallery.js"></script>
+<script src="/desc-gallery.js"></script>
 </body>
 </html>
 
