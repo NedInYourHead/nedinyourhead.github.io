@@ -1,79 +1,33 @@
-<!DOCTYPE html>
-<html lang="en-gb">
-<head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&ampdisplay=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&ampdisplay=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@900&ampdisplay=swap" rel="stylesheet">
+from project_site_data import ProjectSiteData, Link, GalleryImage, BodyContent
 
-	<link rel="stylesheet" href="/project-style.css">
 
-	<title>This Website</title>
-	<link rel="icon" href="/favicon.png">
-	
-
-</head>
-<body>
-  <div class= "split-title">
-    <div class="h1"><a href="/">&lt;</a> This Website</div>
-    <div class="role">Web Developer, Designer</div>
-  </div>
-  
-  <div class="split-body">
+project_data = ProjectSiteData(
     
-    <div class="gallery">
-      <div class="full-image-container">
-        <img id="full-image" src="thumbnail.png" style="image-rendering: pixelated;">
-        <div id="full-image-caption"></div>
-      </div>
-      
-      <div class="previews">
-        <img id="thumbnail" class="thumb" src="thumbnail.png" style="image-rendering: pixelated;" onclick="galleryFunction(this)">
-		
-        <img class="thumb" src="screenshot1.png" title="templater.py script" onclick="galleryFunction(this)">
-		
-        <img class="thumb" src="screenshot2.png" title="ProjectSiteData class" onclick="galleryFunction(this)">
-		
-      </div>
-      
-      <div class="links">
-		
-        <a class="link" href="/">&lt;&lt; Back</a>
-      </div>
-      
-    </div>
-    
-    
-    <div class="desc-div">
+    title = "This Website",
 
-      <div class="desc-navigationbar">
-      
-        <div class="desc-info-container">
-          <div id="title-output" class="desc-title"></div>
-          <div id="date-output" class="desc-date"></div>
-        </div>
+
+    role = "Web Developer, Designer",
+
+
+    thumbType = "png",
+
+
+    galleryImages = [
+        GalleryImage("screenshot1.png", "templater.py script"),
+        GalleryImage("screenshot2.png", "ProjectSiteData class")
+    ],
+
+
+    links = [
         
-        <div id="desc-controls" class="desc-controls">
-          <a id="prevButton" class="desc-gallery-button" href="javascript: switchDescription(-1)">&lt;</a>
-          <a id="nextButton" class="desc-gallery-button" href="javascript: switchDescription(1)">&gt;</a>
-        </div>
-        
-      </div>
-      
-            
-      <p id="desc-output"></p>
-      
-      
-    </div>
-      
-      
-  </div>
-    
-    <ol id="desc-list" style="display: none">
-	  
-      <li data-title="Jinja2 SSG and blog-style projects" data-date="July 17, 2026">
-        
+    ],
+
+
+    bodyContent = [
+
+        BodyContent("Jinja2 SSG and blog-style projects", r"July 17, 2026",
+
+            r"""
             <b>After leaving Falmouth, I've decided to overhaul my website workflow to help with scalability issues that have become apparent over time.</b>
             <br><br>
             I looked into Content Management Systems and Static Site generation during my portfolio project, but quickly realised they would be out of scope in the
@@ -87,11 +41,13 @@
             my limited needs. My workflow consists of a folder of input files, each of which contain a single class constructor for my "ProjectSiteData" class, which
             contains all the information needeed to render my jinja template. It also contains default named parameters, and this means that if I make any additions
             to the template in the future, classes can "opt-in" or leave it as a default.
-            
-      </li>
-	  
-      <li data-title="Portfolio Project" data-date="January 20, 2026">
-        
+            """
+
+        ),
+
+        BodyContent("Portfolio Project", r"January 20, 2026",
+
+            r"""
             <b>Simplicity is a virtue, </b>especially when trying to learn HTML/CSS from scratch with no prior experience!
             <br><br>
             Luckily for me, these languages are ancient as far as technology goes, and there's a wealth of support and documentation online to help. W3Schools and the
@@ -106,14 +62,8 @@
             <br><br>
             Keeping my website strictly to a main menu and project page, I took extra care to make sure my website's pages were legible and organised no matter the
             resolution or device, makingminimal changes between PC and Mobile to increase parity and keep maintenance low.
-            
-      </li>
-	  
-    </ol>
+            """
 
-<script src="/gallery.js"></script>
-<script src="/desc-gallery.js"></script>
-</body>
-</html>
-
-
+        )
+    ]
+)
