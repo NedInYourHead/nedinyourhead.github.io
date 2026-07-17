@@ -14,7 +14,8 @@ project_data = ProjectSiteData(
 
     galleryImages = [
         GalleryImage("screenshot1.png", "templater.py script"),
-        GalleryImage("screenshot2.png", "ProjectSiteData class")
+        GalleryImage("screenshot2.png", "ProjectSiteData class"),
+        GalleryImage("screenshot3.png", "How-to file detailing my workflow")
     ],
 
 
@@ -30,7 +31,7 @@ project_data = ProjectSiteData(
             r"""
             <b>After leaving Falmouth, I've decided to overhaul my website workflow to help with scalability issues that have become apparent over time.</b>
             <br><br>
-            I looked into Content Management Systems and Static Site generation during my portfolio project, but quickly realised they would be out of scope in the
+            Looking into Content Management Systems and Static Site generation during my portfolio project, I quickly realised they would be out of scope in the
             week I had to learn the basics of HTML/CSS. Now that I'm looking for work, I thought it'd be a perfect opportunity to polish up my pipeline for creating
             new project pages. Moreover, it's become clear that I might want to come back and post new updates under old projects, so I've created a blog-inspired 
             list of descriptions with dates so I can do just that. I have also decided to migrate to Github Pages for their free hosting and easy integration with
