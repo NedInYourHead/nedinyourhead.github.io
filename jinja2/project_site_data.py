@@ -55,7 +55,7 @@ class ProjectSiteData(dict):
                  bodyContent: list[BodyContent] = list[BodyContent]
                  ):
 
-        self = {
+        self.data = {
             "title": title,
             "role": role,
             "headerCode": headerCode,
@@ -66,7 +66,7 @@ class ProjectSiteData(dict):
         }
 
     def __str__(self):
-        return self["title"]
+        return self.data["title"]
 
     __repr__ = __str__
     

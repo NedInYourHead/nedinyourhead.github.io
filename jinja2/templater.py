@@ -33,7 +33,7 @@ for source_file in pathlib.Path.from_uri(uri_input_directory).glob('*.py'):
     spec = importlib.util.spec_from_file_location(name, source_file)
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
-    output_text = template.render(mod.project_data)  # this is where to put args to the template renderer
+    output_text = template.render(mod.project_data.data)  # this is where to put args to the template renderer
     
 
     print("Generating " + source_file.stem.replace("_", "-") + "...")
@@ -42,6 +42,8 @@ for source_file in pathlib.Path.from_uri(uri_input_directory).glob('*.py'):
     p = pathlib.Path.from_uri(uri_output_directory)
     folder = p / source_file.stem.replace("_", "-")
     file = folder / "index.html"
+
+    print(output_text)
 
 
     #write to output file if possible
