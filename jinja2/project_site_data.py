@@ -48,6 +48,7 @@ class ProjectSiteData(dict):
                  role: str = "Placeholder",
                  headerCode: str = "",
                  thumbType: str = "png",
+                 imgRendering: str = "auto",
                  galleryImages: list[GalleryImage] = list[GalleryImage],
                  links: list[Link] = list[Link],
                  bodyContent: list[BodyContent] = list[BodyContent]
@@ -58,6 +59,7 @@ class ProjectSiteData(dict):
             "role": role,
             "headerCode": headerCode,
             "thumbType": thumbType,
+            "imgRendering": imgRendering,
             "galleryImages": galleryImages,
             "links": links,
             "bodyContent": bodyContent

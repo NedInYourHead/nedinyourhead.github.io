@@ -14,6 +14,7 @@ project_data = ProjectSiteData(
 
     thumbType = "png",
 
+    imgRendering = "pixelated",
 
     galleryImages = [
         GalleryImage("screenshot1.jpeg", "Mobile port main menu"),
