@@ -6,7 +6,7 @@ project_data = ProjectSiteData(
     title = "Flappy Bird With A Laser",
 
 
-    role = "Designer, Programmer, Artist, Animator",
+    role = "Programmer, Artist, Animator",
 
 
     headerCode = r"",

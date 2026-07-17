@@ -14,6 +14,7 @@ project_data = ProjectSiteData(
 
     thumbType = "png",
 
+    imgRendering = "auto",
 
     galleryImages = [
         GalleryImage("screenshot1.png", "First screenshot"),
