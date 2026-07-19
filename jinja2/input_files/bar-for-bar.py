@@ -14,7 +14,7 @@ project_data = ProjectSiteData(
 
     galleryImages = [
         GalleryImage("screenshot1.jpeg", "Gameplay"),
-        GalleryImage("screenshot2.jpeg", "\"arcade demo\" main menu"),
+        GalleryImage("screenshot2.jpeg", r"'arcade demo' main menu"),
         GalleryImage("screenshot3.jpeg", "Both players ready"),
         GalleryImage("screenshot4.jpeg", "Rematch?"),
         GalleryImage("bar for bar diagram.png", "Gameplay flowchart")
