@@ -11,9 +11,9 @@ project_data = ProjectSiteData(
     thumbType = "png",
 
     galleryImages = [
-        GalleryImage("screenshot1.png", "Intro screen (leads directly into gameplay)"),
+        GalleryImage("screenshot1.jpeg", "Intro screen (leads directly into gameplay)"),
         GalleryImage("screenshot2.png", "Gameplay"),
-        GalleryImage("screenshot3.png", "Layers fly offscreen to reveal the next ones underneath.")
+        GalleryImage("screenshot3.jpeg", "Layers fly offscreen to reveal the next ones underneath.")
     ],
 
 
