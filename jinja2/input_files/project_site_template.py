@@ -30,12 +30,13 @@ project_data = ProjectSiteData(
 
     bodyContent = [
         
-        BodyContent("Without embed:", r"Month DD, YYYY",
+        BodyContent("Update Title", r"Month DD, YYYY",
 
             r"""
-            Before I got spotify, before I got an MP3 player, I used to go home on the bus after dark during the winter, and I always enjoyed watching the lights of the city out the window as it went by, humming this music in my head. 
+            <b>Placeholder Text</b>
             <br><br>
-            So as soon as I could get my hands on an MP3 player, I immediately started loading songs onto it to capture that feeling, and these would be the tracks I'd listen to as I wandered London on my scooter during my teenage years. 8 years on from that and counting, I've kept adding to that playlist to this day.
+            This is some placeholder text to be featured in the body of the
+            project website.
             """
 
         )

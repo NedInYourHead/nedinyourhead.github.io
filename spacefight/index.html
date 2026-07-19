@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&ampdisplay=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&ampdisplay=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@900&ampdisplay=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="/project-style.css">
+
+	<title>Spacefight</title>
+	<link rel="icon" href="/favicon.png">
+	
+
+</head>
+<body>
+  <div class= "split-title">
+    <div class="h1"><a href="/">&lt;</a> Spacefight</div>
+    <div class="role">Programmer, Designer, Artist</div>
+  </div>
+  
+  <div class="split-body">
+    
+    <div class="gallery">
+      <div class="full-image-container">
+        <img id="full-image" src="thumbnail.png" style="image-rendering: pixelated;">
+        <div id="full-image-caption"></div>
+      </div>
+      
+      <div class="previews">
+        <img id="thumbnail" class="thumb" src="thumbnail.png" style="image-rendering: pixelated;" onclick="galleryFunction(this)">
+		
+        <img class="thumb" src="screenshot1.png" style="image-rendering: pixelated;" title="Main menu" onclick="galleryFunction(this)">
+		
+        <img class="thumb" src="screenshot2.png" style="image-rendering: pixelated;" title="Gameplay" onclick="galleryFunction(this)">
+		
+        <img class="thumb" src="screenshot3.png" style="image-rendering: pixelated;" title="How to play" onclick="galleryFunction(this)">
+		
+      </div>
+      
+      <div class="links">
+		
+        <a class="link" href="https://nedinyourhead.itch.io/spacefight">Itch.io page + web version &gt;&gt;<br></a>
+		
+        <a class="link" href="/">&lt;&lt; Back</a>
+      </div>
+      
+    </div>
+    
+    
+    <div class="desc-div">
+
+      <div class="desc-navigationbar">
+      
+        <div class="desc-info-container">
+          <div id="title-output" class="desc-title"></div>
+          <div id="date-output" class="desc-date"></div>
+        </div>
+        
+        <div id="desc-controls" class="desc-controls">
+          <a id="prevButton" class="desc-gallery-button" href="javascript: switchDescription(-1)">&lt;</a>
+          <a id="nextButton" class="desc-gallery-button" href="javascript: switchDescription(1)">&gt;</a>
+        </div>
+        
+      </div>
+      
+            
+      <p id="desc-output"></p>
+      
+      
+    </div>
+      
+      
+  </div>
+    
+    <ol id="desc-list" style="display: none">
+	  
+      <li data-title="Uni Project" data-date="November 27, 2025">
+        
+            Spacefight was made as a uni project, to prototype some of the basic elements of a concept I had for a more fleshed-out zero-g fighting game, as well as to figure out how
+            Unity's physics system actually works. Because this was a solo project, I decided to make all assets myself (including the fonts! Though excluding the suave music that plays
+            when you spend too long in the main menu :P).
+            <br><br>
+            Taking inspiration from the 2016 mobile game <i>Ultra Fighting Bros</i>, players are placed in a box, floating through space, which is occasionally sent careening by stray
+            meteors, sending it spinning. This creates a unique challenge where players try to touch each other on the wall while their opponent is on moving ground. To make this more
+            interesting, players must try and orient themselves in the air to land upright on the wall if they want to minimise their stun period.
+            <br><br>
+            Other modifiers that the ship would float through in the full concept include gravity zones, turbulence, and more, with full fighting-game movesets for the players, and
+            floating crates with items and weapons.
+            
+      </li>
+	  
+    </ol>
+
+<script src="/gallery.js"></script>
+<script src="/desc-gallery.js"></script>
+</body>
+</html>
+
+

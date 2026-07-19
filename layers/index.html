@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&ampdisplay=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&ampdisplay=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@900&ampdisplay=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="/project-style.css">
+
+	<title>Layers</title>
+	<link rel="icon" href="/favicon.png">
+	
+
+</head>
+<body>
+  <div class= "split-title">
+    <div class="h1"><a href="/">&lt;</a> Layers</div>
+    <div class="role">Designer, Artist, Programmer</div>
+  </div>
+  
+  <div class="split-body">
+    
+    <div class="gallery">
+      <div class="full-image-container">
+        <img id="full-image" src="thumbnail.png" style="image-rendering: auto;">
+        <div id="full-image-caption"></div>
+      </div>
+      
+      <div class="previews">
+        <img id="thumbnail" class="thumb" src="thumbnail.png" style="image-rendering: auto;" onclick="galleryFunction(this)">
+		
+        <img class="thumb" src="screenshot1.png" style="image-rendering: auto;" title="Intro screen (leads directly into gameplay)" onclick="galleryFunction(this)">
+		
+        <img class="thumb" src="screenshot2.png" style="image-rendering: auto;" title="Gameplay" onclick="galleryFunction(this)">
+		
+        <img class="thumb" src="screenshot3.png" style="image-rendering: auto;" title="Layers fly offscreen to reveal the next ones underneath." onclick="galleryFunction(this)">
+		
+      </div>
+      
+      <div class="links">
+		
+        <a class="link" href="https://drive.google.com/file/d/19Uy0eRhZoJG3qkUeV9SyUiiqgD7iUiJg/view?usp=sharing">Google Drive download link &gt;&gt;<br></a>
+		
+        <a class="link" href="/">&lt;&lt; Back</a>
+      </div>
+      
+    </div>
+    
+    
+    <div class="desc-div">
+
+      <div class="desc-navigationbar">
+      
+        <div class="desc-info-container">
+          <div id="title-output" class="desc-title"></div>
+          <div id="date-output" class="desc-date"></div>
+        </div>
+        
+        <div id="desc-controls" class="desc-controls">
+          <a id="prevButton" class="desc-gallery-button" href="javascript: switchDescription(-1)">&lt;</a>
+          <a id="nextButton" class="desc-gallery-button" href="javascript: switchDescription(1)">&gt;</a>
+        </div>
+        
+      </div>
+      
+            
+      <p id="desc-output"></p>
+      
+      
+    </div>
+      
+      
+  </div>
+    
+    <ol id="desc-list" style="display: none">
+	  
+      <li data-title="Portfolio Project" data-date="January 20, 2026">
+        
+            <b>Tilt your phone to avoid enemies as you descend... The Layers!</b>
+            <br><br>
+            The basic premise was for an endless game where you must tilt your phone to avoid enemies and reach the hole leading to the next layer, with more enemies being introduced
+            as you progressed through the levels. The question that remained was: what would that progress look like? I cycled through ideas, from an exploration-based metroidbrania, to
+            a roguelike, to a boss-rush game, and in the meantime kept myself busy by creating elements I knew would be in all of them, and I feel I got it to look really good. (cont.)
+            
+      </li>
+	  
+      <li data-title="Development-oriented feature framing method" data-date="January 20, 2026">
+        
+            This process unfortunately forced me to keep my options open, causing the scope to balloon as I tried to accomodate all possible designs and create systems for them. So at a
+            certain point, I had to limit my possibilities, and to avoid this situation in the future I devised a method for building components and systems that would reframe it from the
+            perspective of people actually working on the project, i.e myself:
+            <br><br>
+            1. What do developers want to concern themselves with in order to set this component/entity up in-game?
+            <br><br>
+            2. What do those developers expect the code to do/work out for them automatically?
+            <br><br>
+            ...And anything between those two questions, I could leave exposed with default values. Using these questions, I built a more limited set of systems and prefabs that could be
+            easily expanded on within the reduced scope I picked, limiting scalability, but trusting that I'd be able to refactor and rework those systems when (and if) I got to that point.
+            
+      </li>
+	  
+    </ol>
+
+<script src="/gallery.js"></script>
+<script src="/desc-gallery.js"></script>
+</body>
+</html>
+
+
