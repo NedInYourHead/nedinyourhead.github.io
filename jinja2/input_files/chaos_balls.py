@@ -24,7 +24,7 @@ project_data = ProjectSiteData(
 
     bodyContent = [
         
-        BodyContent(r"<i>It's a Winter Wonder-Jam!</i>", r"Month DD, YYYY",
+        BodyContent(r"<i>It's a Winter Wonder-Jam!</i>", r"January 02, 2023",
 
             r"""
             <b>Organise as many balls as possible in 60 seconds by whacking them into the goals using your baseball bat- but be careful, as getting hit by one will lead to an instant
