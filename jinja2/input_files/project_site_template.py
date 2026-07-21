@@ -5,12 +5,11 @@ project_data = ProjectSiteData(
     
     title = "Project Title",
 
-
     role = "Role On The Project",
-
 
     headerCode = r"",
 
+    thumbCaption = "",
 
     thumbType = "png",
 
