@@ -29,7 +29,7 @@
       </div>
       
       <div class="previews">
-        <img id="thumbnail" class="thumb" src="thumbnail.png" style="image-rendering: {{imgRendering}};" onclick="galleryFunction(this)">
+        <img id="thumbnail" class="thumb" src="thumbnail.png" style="image-rendering: {{imgRendering}};" title="{{thumbnailCaption}}" onclick="galleryFunction(this)">
 		{% for item in galleryImages %}
         <img class="thumb" src="{{item.filename}}" style="image-rendering: {{imgRendering}};" title="{{item.caption}}" onclick="galleryFunction(this)">
 		{% endfor %}

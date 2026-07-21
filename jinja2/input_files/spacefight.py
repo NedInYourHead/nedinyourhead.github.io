@@ -15,7 +15,7 @@ project_data = ProjectSiteData(
 
     galleryImages = [
         GalleryImage("screenshot1.png", "Main menu"),
-        GalleryImage("screenshot2.png", "Gameplay"),
+        GalleryImage("screenshot2.png", "\"Yellow wins\" portrait"),
         GalleryImage("screenshot3.png", "How to play")
     ],
 
