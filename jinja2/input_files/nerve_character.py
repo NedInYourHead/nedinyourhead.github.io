@@ -11,7 +11,7 @@ project_data = ProjectSiteData(
     
     thumbType = "gif",
 
-    imgRendering = "auto",
+    imgRendering = "pixelated",
 
     galleryImages = [
         GalleryImage("NerveRun.gif", "Run cycle"),
