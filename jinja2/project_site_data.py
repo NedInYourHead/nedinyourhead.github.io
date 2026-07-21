@@ -28,7 +28,10 @@ class GalleryImage(dict):
 
 class BodyContent(dict):
 
-    def __init__(self, title: str, date: str, content: str):
+    def __init__(self, title: str = "Placeholder Post",
+                 date: str = "",
+                 content: str = "Placeholder Content"):
+        
         self.update({
             "title": title,
             "date": date,
@@ -50,9 +53,9 @@ class ProjectSiteData(dict):
                  thumbCaption: str = "",
                  thumbType: str = "png",
                  imgRendering: str = "auto",
-                 galleryImages: list[GalleryImage] = list[GalleryImage],
-                 links: list[Link] = list[Link],
-                 bodyContent: list[BodyContent] = list[BodyContent]
+                 galleryImages: list[GalleryImage] = [],
+                 links: list[Link] = [],
+                 bodyContent: list[BodyContent] = [BodyContent()]
                  ):
 
         self.data = {
