@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&ampdisplay=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&ampdisplay=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@900&ampdisplay=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="/project-style.css">
+
+	<title>Nights</title>
+	<link rel="icon" href="/favicon.png">
+	
+
+</head>
+<body>
+  <div class= "split-title">
+    <div class="h1"><a href="/">&lt;</a> Nights</div>
+    <div class="role">Cover Designer, Selector</div>
+  </div>
+  
+  <div class="split-body">
+    
+    <div class="gallery">
+      <div class="full-image-container">
+        <img id="full-image" src="thumbnail.png" style="image-rendering: auto;">
+        <div id="full-image-caption"></div>
+      </div>
+      
+      <div class="previews">
+        <img id="thumbnail" class="thumb" src="thumbnail.png" style="image-rendering: auto;" title="<i>Nights</i> original cover" onclick="galleryFunction(this)">
+		
+        <img class="thumb" src="mix-cover1.png" style="image-rendering: auto;" title="<i>Pop mix</i> cover" onclick="galleryFunction(this)">
+		
+      </div>
+      
+      <div class="links">
+		
+        <a class="link" href="https://open.spotify.com/playlist/172ztGQay5po10tABASVuM">Nights playlist on spotify &gt;&gt;<br></a>
+		
+        <a class="link" href="https://open.spotify.com/playlist/6ggkET4YsF2QmCySWR0eic">Nights playlist (Pop mix) on spotify &gt;&gt;<br></a>
+		
+        <a class="link" href="/">&lt;&lt; Back</a>
+      </div>
+      
+    </div>
+    
+    
+    <div class="desc-div">
+
+      <div class="desc-navigationbar">
+      
+        <div class="desc-info-container">
+          <div id="title-output" class="desc-title"></div>
+          <div id="date-output" class="desc-date"></div>
+        </div>
+        
+        <div id="desc-controls" class="desc-controls">
+          <a id="prevButton" class="desc-gallery-button" href="javascript: switchDescription(-1)">&lt;</a>
+          <a id="nextButton" class="desc-gallery-button" href="javascript: switchDescription(1)">&gt;</a>
+        </div>
+        
+      </div>
+      
+            
+      <p id="desc-output"></p>
+      
+      
+    </div>
+      
+      
+  </div>
+    
+    <ol id="desc-list" style="display: none">
+	  
+      <li data-title="Pop Mix" data-date="May, 2024">
+        
+            <b>A more palatable introduction to my night-time playlist. Lyric songs favoured.</b>
+            <br><br>
+             My <i>Nights</i> playlist can get a bit experimental and ambient, so this Pop Mix contains the most easy-listening songs of the lot. It was originally created for my friends when they were
+             staying over in London, and a couple of them couldn't get into the music without lyrics!
+            <br><br>
+            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6ggkET4YsF2QmCySWR0eic?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            
+      </li>
+	  
+      <li data-title="Nights Playlist" data-date="2019">
+        
+            <b>Songs found behind a lamppost, in the canal, under a council housing estate, within a cul-de-sac, around a bridge painted with graffiti.</b>
+            <br><br>
+            Before I got spotify, before I got an MP3 player, I used to go home on the bus after dark during the winter, and I always enjoyed watching the lights of the city out the
+            window as it went by, humming this music in my head. 
+            <br><br>
+            So as soon as I could get my hands on an MP3 player, I immediately started loading songs onto it to capture that feeling, and these would be the tracks I'd listen to as I
+            wandered London on my scooter during my teenage years. 8 years on from that and counting, I've kept adding to this playlist to this day.
+            <br><br>
+            Listen and Enjoy!
+            <br><br>
+            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/172ztGQay5po10tABASVuM?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            
+      </li>
+	  
+    </ol>
+
+<script src="/gallery.js"></script>
+<script src="/desc-gallery.js"></script>
+</body>
+</html>
+
+
