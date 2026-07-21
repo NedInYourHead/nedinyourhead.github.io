@@ -9,10 +9,7 @@ project_data = ProjectSiteData(
     role = "Art, Animations, Formatting",
 
 
-    headerCode = r"""<style type="text/css">
-                      body {cursor: url("https://www.rw-designer.com/cursor-set/oops-all-link-selects"), auto;}
-                      </style>
-                      """,
+    headerCode = r"<style type=\"text/css\">body {cursor: url(\"https://www.rw-designer.com/cursor-set/oops-all-link-selects\"), auto;}</style>",
 
 
     thumbType = "png",
