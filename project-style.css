@@ -68,7 +68,7 @@
     width: min(95vh, 100%);
     object-fit: cover;
     gap: 0.5lh;
-    align-self: center;
+    align-self: auto;
   }
   
   .full-image-container {
