@@ -43,23 +43,22 @@ for source_file in pathlib.Path.from_uri(uri_input_directory).glob('*.py'):
     folder = p / source_file.stem.replace("_", "-")
     file = folder / "index.html"
 
+    #filter work-in-progress sourcefiles
+    if "WIP" not in source_file.name:
+        
+        #write to output file if possible
+        try:
+            with file.open("w") as f:
+                f.write(output_text)
+
+        #if output folder doesn't exist, create directory first, with basic components for files
+        except FileNotFoundError:
+            folder.mkdir()
+            print(f"    Created directory at: '{folder}'")
+            with file.open("w") as f:
+                f.write(output_text)
 
 
-    #write to output file if possible
-    try:
-        with file.open("w") as f:
-            f.write(output_text)
-
-    #if output folder doesn't exist, create directory first, with basic components for files
-    except FileNotFoundError:
-        folder.mkdir()
-        print(f"    Created directory at: '{folder}'")
-        with file.open("w") as f:
-            f.write(output_text)
-
-
-
-    if source_file.name != "project_site_template.py":
         #make shortcut to open input file for easy editing
         make_shortcut(PYTHONW_DIRECTORY + " -m idlelib.idle " + '"' + INPUT_DIRECTORY + "\\" + source_file.name + '"',
                       name = 'input file',
