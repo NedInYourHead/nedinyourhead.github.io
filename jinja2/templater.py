@@ -67,4 +67,7 @@ for source_file in pathlib.Path.from_uri(uri_input_directory).glob('*.py'):
                       noexe = False
                       )
 
-    print("    Generated " + source_file.stem.replace("_", "-") + ".")
+        print("    Generated " + source_file.stem.replace("_", "-") + ".")
+
+    else:
+        print("    Did not generate " + source_file.stem.replace("_", "-") + " - marked as work in progress")
