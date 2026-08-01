@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&ampdisplay=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&ampdisplay=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@900&ampdisplay=swap" rel="stylesheet">
+  <meta http-equiv="Cache-Control" content="max-age=86400">
+
+	<link rel="stylesheet" href="/project-style.css">
+
+	<title>Saline Descent</title>
+	<link rel="icon" href="/favicon.png">
+	
+
+</head>
+<body>
+  <div class= "split-title">
+    <div class="h1"><a href="/">&lt;</a> Saline Descent</div>
+    <div class="role">Programmer</div>
+  </div>
+  
+  <div class="split-body">
+    
+    <div class="gallery">
+      <div class="full-image-container">
+        <img id="full-image" src="thumbnail.png" style="image-rendering: auto;">
+        <div id="full-image-caption"></div>
+      </div>
+      
+      <div class="previews">
+        <img id="thumbnail" class="thumb" src="thumbnail.png" style="image-rendering: auto;" title="Saline Descent Logo" onclick="galleryFunction(this)">
+		
+        <img class="thumb" src="spinspin.gif" style="image-rendering: auto;" title="2.5D Directional Sprite Switcher" onclick="galleryFunction(this)" loading="lazy">
+		
+        <img class="thumb" src="desecration.gif" style="image-rendering: auto;" title="Crumbling Objects" onclick="galleryFunction(this)" loading="lazy">
+		
+        <img class="thumb" src="triggers.png" style="image-rendering: auto;" title="UnityEvents Trigger Components" onclick="galleryFunction(this)" loading="lazy">
+		
+        <img class="thumb" src="subtitles.png" style="image-rendering: auto;" title="Subtitle System Components" onclick="galleryFunction(this)" loading="lazy">
+		
+      </div>
+      
+      <div class="links">
+		
+        <a class="link" target="_blank" href="https://joshua-apotheosis.itch.io/saline-descent">Download on Itch.io &gt;&gt;<br></a>
+		
+        <a class="link" href="/">&lt;&lt; Back</a>
+      </div>
+      
+    </div>
+    
+    
+    <div class="desc-div">
+
+      <div class="desc-navigationbar">
+      
+        <div class="desc-info-container">
+          <div id="title-output" class="desc-title"></div>
+          <div id="date-output" class="desc-date"></div>
+        </div>
+        
+        <div id="desc-controls" class="desc-controls">
+          <a id="prevButton" class="desc-gallery-button" href="javascript: switchDescription(-1)">&lt;</a>
+          <a id="nextButton" class="desc-gallery-button" href="javascript: switchDescription(1)">&gt;</a>
+        </div>
+        
+      </div>
+      
+            
+      <p id="desc-output"></p>
+      
+      
+    </div>
+      
+      
+  </div>
+    
+    <ol id="desc-list" style="display: none">
+	  
+      <li data-title="8-Direction Sprites and Crumbling Objects" data-date="July 28, 2026">
+        
+            <b>As the sole programmer on Saline Descent</b>, I had the opportunity to create a variety of interesting features & mechanics. Here are some fun examples:
+            <br><br>
+            To cement the low-poly visual style of our game and reduce asset production bottlenecks, I was tasked with creating a system to mimic the directional sprites of Doom and games
+            like it. With this in mind, I created a directional sprites system which could support any number of directions we were able to produce sprites for. Here I've implemented a
+            standard, 8-directional setup, with sprites to match our monster's capsular hitbox.
+            <br><br>
+            Additionally, to emphasize the fragility of the environment to players, I created a system that would allow us to cause any object to crumble on command I created particles
+            reminiscent of salt crystals, which would spawn more or less based on the volume of the model, switching it with another model if desired. I had a lot of fun testing this,
+            strapping a crumbler to the player and running around the environment and destroying random objects in the environment.
+            
+      </li>
+	  
+      <li data-title="UnityEvents Trigger Components" data-date="July 28, 2026">
+        
+            As Saline Descent's programmer, I decided to build some tools to facilitate level design. I chose to create a modular set of components which utilised Unity's 
+            Events System. Examples include:
+            <ul>
+              <li>A timer which invokes after a time limit, that can be set per-component or per-call</li>
+              <li>A one-time environmental trigger box</li>
+              <li>A toggle trigger which alternates between two sets of events each time it is invoked, or can be set directly to invoke a particular state</li>
+              <li>An environmental trigger which invokes when interacted with</li>
+              <li>A trigger which invokes on Start()</li>
+              <li>A trigger which goes off periodically, with adjustable randomness</li>
+            </ul>
+            Because of their reliance on Events, designers could chain these components, lego-style in-editor, to create in-game logic, puzzles and action sequences in a logical, 
+            hands-on way.
+            
+      </li>
+	  
+      <li data-title="Subtitle System" data-date="July 28, 2026">
+        
+            Using roguecode's Unity-Simple-SRT package (and jury-rigging it a little to suit our purposes), I set up the subtitle systems for our game, ensuring a smooth workflow for our 
+            writer and voice-actors.
+            <br><br>
+            Due to their ubiquity, I suggested we use the SRT format for our subtitles, as it would allow our writer to take advantage of the many free SRT editors online. I created a
+            Dialogue component which would trigger subtitle and/or audio files simultaneously, using a singleton to ensure subtitles could be triggered from anywhere in the scene, with 
+            a single output text component.           
+            
+      </li>
+	  
+    </ol>
+
+<script src="/gallery.js"></script>
+<script src="/desc-gallery.js"></script>
+</body>
+</html>
+
+
