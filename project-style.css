@@ -109,7 +109,7 @@
     scrollbar-color: #E21037 transparent;
   }
   
-  .thumb #thumbnail {
+  #thumbnail {
 	object-fit: contain;
 	max-width: 4lh;
   }
